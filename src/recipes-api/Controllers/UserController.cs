@@ -43,7 +43,7 @@ public class UserController : ControllerBase
         return CreatedAtAction("Get", new { email = user.Email }, user);
     }
 
-    // PUT /user
+    // PUT /user/{email}
     [HttpPut("{email}")]
     public IActionResult Update(string email, [FromBody] User user)
     {
@@ -63,10 +63,19 @@ public class UserController : ControllerBase
         return Ok(user);
     }
 
-    // 9 - Sua aplicação deve ter o endpoint DEL /user
+    // DELETE /user/{email}
     [HttpDelete("{email}")]
     public IActionResult Delete(string email)
     {
-        throw new NotImplementedException();
+        bool exists = _service.UserExists(email);
+
+        if (!exists)
+        {
+            return NotFound();
+        }
+
+        _service.DeleteUser(email);
+
+        return NoContent();
     }
 }
