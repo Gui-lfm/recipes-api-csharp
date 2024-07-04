@@ -19,7 +19,8 @@ public class RecipesController : ControllerBase
     {
         this._service = service;
     }
-
+    
+    // GET /recipe
     //Read
     [HttpGet]
     public IActionResult Get()
@@ -29,6 +30,7 @@ public class RecipesController : ControllerBase
         return Ok(response);
     }
 
+    // GET /recipe/{name}
     //Read
     [HttpGet("{name}", Name = "GetRecipe")]
     public IActionResult Get(string name)
@@ -72,7 +74,7 @@ public class RecipesController : ControllerBase
         return NoContent();
     }
 
-    // DELETE /recipe
+    // DELETE /recipe/{name}
     [HttpDelete("{name}")]
     public IActionResult Delete(string name)
     {
