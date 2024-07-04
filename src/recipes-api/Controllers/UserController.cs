@@ -34,11 +34,13 @@ public class UserController : ControllerBase
         return Ok(response);
     }
 
-    // 7 - Sua aplicação deve ter o endpoint POST /user
+    // POST /user
     [HttpPost]
     public IActionResult Create([FromBody] User user)
     {
-        throw new NotImplementedException();
+        _service.AddUser(user);
+
+        return CreatedAtAction("Get", new { email = user.Email }, user);
     }
 
     // "8 - Sua aplicação deve ter o endpoint PUT /user
