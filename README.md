@@ -1,10 +1,5 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Recipes API
+
+## Sobre
+
+Projeto realizado durante a aceleração c# oferecida pela Trybe em Julho de 2024. Trata-se de uma API responsável por cadastrar, consultar, alterar e excluir receitas de um app. Além disso, é possível cadastrar usuários e esses usuários poderão comentar as receitas postadas. Minha contribuição à esse projeto refere-se ao código implementado na camada controller da aplicação.
