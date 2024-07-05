@@ -21,7 +21,6 @@ public class RecipesController : ControllerBase
     }
     
     // GET /recipe
-    //Read
     [HttpGet]
     public IActionResult Get()
     {
@@ -31,7 +30,6 @@ public class RecipesController : ControllerBase
     }
 
     // GET /recipe/{name}
-    //Read
     [HttpGet("{name}", Name = "GetRecipe")]
     public IActionResult Get(string name)
     {
