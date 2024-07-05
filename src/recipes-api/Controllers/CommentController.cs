@@ -33,6 +33,8 @@ public class CommentController : ControllerBase
     [HttpGet("{name}", Name = "GetComment")]
     public IActionResult Get(string name)
     {                
-        throw new NotImplementedException();                   
+        var response = _service.GetComments(name);
+
+        return Ok(response);                 
     }
 }
